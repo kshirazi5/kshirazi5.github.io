@@ -13,7 +13,7 @@ d3.json(url).then(function(data) {
 
 function init() {
 
-  // Use D3 to select the dropdown menu
+  // Use D3 to select the dropdown menu.........
   let dropMenu = d3.select("#selDataset");
 
   // Use D3 to get sample names and populate the drop-down selector
@@ -40,27 +40,27 @@ function init() {
       console.log(sample_one);
 
       // Build plots
-      buildMetadata(sample_one);
-      buildBarChart(sample_one);
-      buildBubbleChart(sample_one);
-      buildGaugeChart(sample_one);
+      metaData(sample_one);
+      barChart(sample_one);
+      bubbleChart(sample_one);
+    
 
   });
 };
 
-// Function that populates metadata info
-function buildMetadata(sample) {
+// Function that populates metadata 
+function metaData(sample) {
 
-  // Use D3 to retrieve all of the data
+  // Use D3 to retrieve all data
   d3.json(url).then((data) => {
 
-      // Retrieve metadata
+      // Retrieving metadata...
       let metadata = data.metadata;
 
-      // Filter for value of the sample
+      // Filter for sample value
       let value = metadata.filter(result => result.id == sample);
 
-      // Log the array of metadata objects 
+      // Log array of metadata objects 
       console.log(value)
 
       // Get the first index in array
@@ -81,8 +81,8 @@ function buildMetadata(sample) {
 
 };
 
-// Function that builds the bar chart
-function buildBarChart(sample) {
+// Builds the bar chart
+function barChart(sample) {
 
   // Use D3 to retrieve all of the data
   d3.json(url).then((data) => {
@@ -128,8 +128,8 @@ function buildBarChart(sample) {
   });
 };
 
-// Function that builds the bubble chart
-function buildBubbleChart(sample) {
+// Builds the bubble chart
+function bubbleChart(sample) {
 
   // Use D3 to retrieve all of the data
   d3.json(url).then((data) => {
@@ -176,17 +176,17 @@ function buildBubbleChart(sample) {
   });
 };
 
-// Function that updates dashboard when sample is changed
+// Updates dashboard when sample is changed
 function optionChanged(value) { 
 
   // Log the new value
   console.log(value); 
 
   // Call all functions 
-  buildMetadata(value);
-  buildBarChart(value);
-  buildBubbleChart(value);
-  buildGaugeChart(value);
+  metaData(value);
+  barChart(value);
+  bubbleChart(value);
+ 
 };
 
 // Call the initialize function
