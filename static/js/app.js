@@ -13,16 +13,16 @@ d3.json(url).then(function(data) {
 
 function init() {
 
-  // Use D3 to select the dropdown menu.........
+  // Use D3 to select dropdown menu.........
   let dropMenu = d3.select("#selDataset");
 
   // Use D3 to get sample names and populate the drop-down selector
   d3.json(url).then((data) => {
       
-      // Set a variable for the sample names
+      // Set variable for sample names
       let names = data.names;
 
-      // Add  samples to dropdown menu
+      // Add samples to dropdown menu
       names.forEach((id) => {
 
           // Log the value of id for each iteration of the loop
