@@ -9,5 +9,4 @@ https://plotly.com/javascript/horizontal-bar-charts/
 Used for constructing bubble chart starting on line 131:
 https://plotly.com/javascript/bubble-charts/
 
-Creating dropdown menu:
-https://stackoverflow.com/questions/33777272/creating-a-drop-down-with-d3-js
+
