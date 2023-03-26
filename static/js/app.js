@@ -179,16 +179,16 @@ function bubbleChart(sample) {
 // Updates dashboard when sample is changed
 function optionChanged(value) { 
 
-  // Log the new value
+  // Logging new value
   console.log(value); 
 
-  // Call all functions 
+  // Calling all functions 
   metaData(value);
   barChart(value);
   bubbleChart(value);
  
 };
 
-// Call the initialize function
+// Calling the initialize function
 init();
 
